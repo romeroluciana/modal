@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background: url("https://picsum.photos/id/1059/1600/900/?blur=1"), rgba(0,0,0,.45);
+  background-size: cover;
+  background-blend-mode: multiply;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/* HERO */
+
+.hero {
+  color: white;
+  text-align: center;
+  width: 50vw;
+}
+
+.hero-title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-block-end: 1rem;
+}
+
+.hero-text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-block-end: 2.5rem;
+}
+
+.modal-btn {
+  all: unset;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  padding: .65rem 2rem;
+  text-transform: uppercase;
+  transition: all .25s ease-in-out;
+}
+
+.modal-btn:hover {
+  background: white;
+  color: black;
+}
+
+/* MODAL */
+
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,.65);
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity .5s;
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  background: white;
+  border-radius: 8px;
+  padding: 2.5rem 3.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.modal-title {
+  padding-block-end: .4rem;
+  font-size: 2rem;
+}
+
+.modal-text {
+  padding-block-end: 2rem;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal form label {
+  display: block;
+  margin-block-end: .5rem;
+}
+
+.modal form input {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: .65rem 1.5rem;
+  margin-block-end: 1.2rem;
+}
+
+.close-btn {
+  all: unset;
+  background: black;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: .1rem .35rem;
+  transition: all .2s ease;
+}
+
+.close-btn:hover {
+  background: white;
+  color: black;
+}
+
+.subscribe-btn {
+  all: unset;
+  background: black;
+  border: 2px solid black;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  padding: .65rem 1.5rem;
+  margin-block-start: 1rem;
+  transition: all .2s ease;
+}
+
+.subscribe-btn:hover {
+  background: white;
+  color: black;
+}
+
+@media (max-width: 450px) {
+  
+  .hero {
+    width: 80vw;
+  }
+  
+  .modal {
+    margin-inline: 1.5rem;
+    padding: 2.5rem 3rem;
+  }
+  
+}
